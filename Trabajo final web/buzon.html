@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        padding: 20px;
+        background-color: #42260f;
+        color: #fff;
+      }
+      .header {
+        padding: 30px;
+        text-align: center;
+        background-color: #f08e05;
+        color: #42260f;
+      }
+      .header h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .header p {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #f08e05;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .form-container h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #42260f;
+      }
+      .form-container input, .form-container textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        background-color: #fff;
+      }
+      .form-container textarea {
+        height: 150px;
+      }
+      .form-container button {
+        width: 100%;
+        padding: 15px;
+        background-color: #42260f;
+        color: #f08e05;
+        font-size: 18px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .form-container button:hover {
+        background-color: #f08e05;
+        color: #42260f;
+      }
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #f08e05;
+        color: #42260f;
+        margin-top: 20px;
+      }
+      .footer h2 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      /* Estilo para el botón de regreso a la página principal */
+      .back-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #42260f;
+        color: #f08e05;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+      .back-button:hover {
+        background-color: #f08e05;
+        color: #42260f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>El Grano Fino</h1>
+      <p>Buzon de Quejas y Sugerencias</p>
+    </div>
+
+    <div class="form-container">
+      <h2>Dejanos tu comentario</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo Electronico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comment">Comentario:</label>
+        <textarea id="comment" name="comment" required></textarea>
+
+        <button type="submit">Enviar Comentario</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <h2>Gracias por tu opinion</h2>
+      <a href="pagina web final8.html" class="back-button">Regresar a la Pagina Principal</a> <!-- Botón de regreso -->
+    </div>
+
+  </body>
+</html>
+

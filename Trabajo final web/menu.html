@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - El Grano Fino</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding: 10px;
+      background-color: #42260f;
+      color: #fff;
+      line-height: 1.6;
+    }
+    .header {
+      padding: 30px;
+      text-align: center;
+      background-color: #f08e05;
+      color: #42260f;
+    }
+    .header h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+    .header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .menu-item {
+      background-color: #914001;
+      width: 250px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+    }
+    .menu-item h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .menu-item p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .menu-item .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #f08e05;
+    }
+    .quantity {
+      margin-top: 10px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    .add-to-cart-btn {
+      background-color: #f08e05;
+      color: #42260f;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .add-to-cart-btn:hover {
+      background-color: #42260f;
+      color: #f08e05;
+    }
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back-button a {
+      background-color: #f08e05;
+      color: #42260f;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .cart-info {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .pay-button {
+      background-color: #f08e05;
+      color: #42260f;
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+    .pay-button:hover {
+      background-color: #42260f;
+      color: #f08e05;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Menú - El Grano Fino</h1>
+    <p>Explora nuestras deliciosas opciones de café y comida.</p>
+  </div>
+
+  <div class="menu-container">
+    <!-- Sección de Café Caliente -->
+    <div class="menu-item">
+      <h3>Café Americano</h3>
+      <p>Un café clásico con cuerpo y sabor intenso.</p>
+      <div class="price">$45.00</div>
+      <input type="number" class="quantity" id="cantidad-cafe-americano" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Café Americano', 45, 'cantidad-cafe-americano')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Café Latte</h3>
+      <p>Un suave café con leche espumosa.</p>
+      <div class="price">$55.00</div>
+      <input type="number" class="quantity" id="cantidad-cafe-latte" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Café Latte', 55, 'cantidad-cafe-latte')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Café Cappuccino</h3>
+      <p>Una mezcla cremosa de café y leche espumosa.</p>
+      <div class="price">$60.00</div>
+      <input type="number" class="quantity" id="cantidad-cafe-cappuccino" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Café Cappuccino', 60, 'cantidad-cafe-cappuccino')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Espresso</h3>
+      <p>Un café intenso y concentrado, perfecto para un impulso.</p>
+      <div class="price">$60.00</div>
+      <input type="number" class="quantity" id="cantidad-espresso" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Espresso', 60, 'cantidad-espresso')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Macchiato</h3>
+      <p>Un espresso con un toque de leche espumosa.</p>
+      <div class="price">$65.00</div>
+      <input type="number" class="quantity" id="cantidad-macchiato" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Macchiato', 65, 'cantidad-macchiato')">Agregar al Carrito</button>
+    </div>
+    
+    <!-- Sección de Café Frío -->
+    <div class="menu-item">
+      <h3>Frappé de Mocha</h3>
+      <p>Una deliciosa mezcla de café, chocolate y hielo.</p>
+      <div class="price">$65.00</div>
+      <input type="number" class="quantity" id="cantidad-frappe-mocha" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Frappé de Mocha', 65, 'cantidad-frappe-mocha')">Agregar al Carrito</button>
+    </div>
+
+    <!-- Sección de Pasteles y Galletas -->
+    <div class="menu-item">
+      <h3>Pastel de Chocolate</h3>
+      <p>Un pastel de chocolate húmedo y delicioso.</p>
+      <div class="price">$45.00</div>
+      <input type="number" class="quantity" id="cantidad-pastel-chocolate" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Pastel de Chocolate', 45, 'cantidad-pastel-chocolate')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Galletas de Vainilla</h3>
+      <p>Galletas suaves y crujientes con un toque de vainilla.</p>
+      <div class="price">$25.00</div>
+      <input type="number" class="quantity" id="cantidad-galletas-vainilla" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Galletas de Vainilla', 25, 'cantidad-galletas-vainilla')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Brownie de Nueces</h3>
+      <p>Un delicioso brownie con nueces y un toque de chocolate.</p>
+      <div class="price">$40.00</div>
+      <input type="number" class="quantity" id="cantidad-brownie-nueces" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Brownie de Nueces', 40, 'cantidad-brownie-nueces')">Agregar al Carrito</button>
+    </div>
+
+    <!-- Sección de Bebidas Frías -->
+    <div class="menu-item">
+      <h3>Limonada</h3>
+      <p>Una refrescante limonada natural.</p>
+      <div class="price">$35.00</div>
+      <input type="number" class="quantity" id="cantidad-limonada" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Limonada', 35, 'cantidad-limonada')">Agregar al Carrito</button>
+    </div>
+    <div class="menu-item">
+      <h3>Frappé de Caramel</h3>
+      <p>Una mezcla perfecta de caramelo y cafe junto con hielo y crema.</p>
+      <div class="price">$55.00</div>
+      <input type="number" class="quantity" id="cantidad-frappe-fresa" value="1" min="1">
+      <button class="add-to-cart-btn" onclick="agregarAlCarrito('Frappé de Fresa', 55, 'cantidad-frappe-fresa')">Agregar al Carrito</button>
+    </div>
+
+  </div>
+
+  <!-- Información del carrito -->
+  <div class="cart-info">
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito-lista"></ul>
+    <p>Total: $<span id="total-carrito">0.00</span></p>
+    
+    <!-- Botón de Pagar -->
+    <button class="pay-button" onclick="window.location.href='pago.html'">Pagar</button>
+  </div>
+
+  <!-- Botón para regresar a la página principal -->
+  <div class="back-button">
+    <a href="pagina web final8.html">Regresar a la Página Principal</a>
+  </div>
+
+  <script>
+    // Arreglo para almacenar los productos en el carrito
+    let carrito = [];
+
+    // Función para agregar productos al carrito
+    function agregarAlCarrito(nombre, precio, idCantidad) {
+      const cantidad = document.getElementById(idCantidad).value;
+      const totalProducto = precio * cantidad;
+      
+      // Agregar el producto al carrito
+      carrito.push({ nombre, cantidad, total: totalProducto });
+      
+      // Actualizar la lista del carrito y el total
+      actualizarCarrito();
+    }
+
+    // Función para actualizar la visualización del carrito
+    function actualizarCarrito() {
+      let carritoLista = '';
+      let total = 0;
+      
+      carrito.forEach(producto => {
+        carritoLista += `<li>${producto.nombre} x${producto.cantidad} - $${producto.total.toFixed(2)}</li>`;
+        total += producto.total;
+      });
+      
+      document.getElementById('carrito-lista').innerHTML = carritoLista;
+      document.getElementById('total-carrito').innerText = total.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
