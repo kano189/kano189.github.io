@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+        padding: 10px;
+        background-color: #42260f;
+        color: #fff;
+        line-height: 1.6;
+      }
+      .header {
+        padding: 30px;
+        text-align: center;
+        background-color: #f08e05;
+        color: #42260f;
+      }
+      .header h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .header p {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #914001;
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f08e05;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .leftcolumn {
+        width: 75%;
+        padding-right: 20px;
+      }
+      .rightcolumn {
+        width: 25%;
+        background-color: #f08e05;
+        padding-left: 20px;
+      }
+      .fakeimg {
+        background-color: #f08e05;
+        width: 100%;
+        padding: 20px;
+      }
+      .card {
+        background-color: #f08e05;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+      .card h2 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #42260f;
+      }
+      .card h3 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #42260f;
+      }
+      .card p {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.8;
+        margin-top: 10px;
+        background-color: #42260f; /* Fondo color café */
+        padding: 10px; /* Añadir relleno */
+        margin: 10px 0; /* Margen superior e inferior de 10px */
+        border-radius: 12px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+      }
+      .image-text-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .image-text-container img {
+        width: 50%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .image-text-container .text {
+        max-width: 45%;
+      }
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #f08e05;
+        color: #42260f;
+        margin-top: 20px;
+      }
+      .footer h2 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      /* Estilo para la imagen de "Nuestros Espacios" */
+      .card img {
+        width: 60%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      /* Estilo para el botón en el footer */
+      .contact-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #42260f;
+        color: #f08e05;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-button:hover {
+        background-color: #f08e05;
+        color: #42260f;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .row {
+          flex-direction: column;
+        }
+        .leftcolumn, .rightcolumn {
+          width: 100%;
+        }
+        .image-text-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .image-text-container img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>El Grano Fino</h1>
+      <p>Conocenos y prueba las variedades que tenemos para ti.</p>
+    </div>
+    <div class="topnav">
+      <a href="menu.html">Menú</a> <!-- Enlace actualizado -->
+      <a href="buzon.html">Buzón</a>
+      <a href="socials.html">Contacto</a> <!-- Enlace a la página de redes sociales -->
+      <a href="#" style="float:right">Gracias por Visitarnos :)</a>
+    </div>
+
+    <div class="row">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2>Nuestra Novedad del Mes</h2>
+          <h5>Frappe Caramel</h5>
+          <div class="image-text-container">
+            <img src="images/frappe-caramel.jpg" alt="Frappe Caramel">
+            <div class="text">
+              <p>¡Atrévete a probarlo!</p>
+              <p>Nuestra novedad este mes es nuestro nuevo y delicioso FRAPPE CARAMEL. Su suave aroma a café y su delicioso sabor dulce te llevarán a conocer nuevas experiencias de sabor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Nuestros Espacios</h2>
+          <img src="images/nuestros-espacios.jpg" alt="Nuestros Espacios">
+          <p>Conoce nuestros espacios, donde podrás relajarte y disfrutar de nuestro café y la variedad de alimentos que tenemos para ti en nuestro menú.</p>
+        </div>
+      </div>
+
+      <div class="rightcolumn">
+        <div class="card">
+          <h2>Sobre Nosotros</h2>
+          <img src="images/sobre-nosotros.jpg" alt="Sobre Nosotros" style="height:100px;">
+          <p>Somos una cafetería que se caracteriza por su gran calidad de café y por nuestro excelente servicio. Atrévete a conocer nuestros espacios y disfrutar de un buen café frío o caliente.</p>
+        </div>
+        <div class="card">
+          <h3>Popular post</h3>
+          <img src="images/post1.jpg" alt="Post 1">
+          <img src="images/post2.jpg" alt="Post 2">
+          <img src="images/post3.jpg" alt="Post 3">
+        </div>
+        <div class="card">
+          <h3>Síguenos en Nuestras Redes Sociales</h3>
+          <p>¡Mantente al tanto de nuestras novedades y ofertas!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2>Contactanos</h2>
+      <a href="socials.html" class="contact-button">Contacto</a>
+    </div>
+
+  </body>
+</html>
+
